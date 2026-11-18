@@ -5,11 +5,8 @@ const PORT = 3000;
 let data = 'Hello world! This is the initial data.';
 
 const server = http.createServer((req, res) => {
-
     console.log(`Request received: ${req.method} ${req.url}`);
-
     res.setHeader('Content-Type', 'text/plain');
-
     // GET route
     if (req.method === 'GET' && req.url === '/data') {
         res.statusCode = 200;
